@@ -15,9 +15,9 @@ export default async function Page() {
     <>
       <section className={styles.top}>
         <div>
-          <h1 className={styles.title}>テクノロジーの力で世界を変える</h1>
+          <h1 className={styles.title}>確かな技術力を育む</h1>
           <p className={styles.description}>
-            私たちは市場をリードしているグローバルテックカンパニーです。
+            未経験からエンジニアを育て社会に貢献し、クライアント様を筆頭に従業員ひとりひとりの未来に寄り添う。
           </p>
         </div>
         <Image
