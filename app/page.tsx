@@ -75,27 +75,27 @@ export default async function Page() {
               </p>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>社名</dt>
-                <dd className={styles.infoDescription}>株式会社Simple</dd>
+                <dd className={styles.infoDescription}>株式会社コードネスト</dd>
               </dl>
               <dl className={styles.info}>
-                <dt className={styles.infoTitle}>設立</dt>
-                <dd className={styles.infoDescription}>2023年4月</dd>
+                <dt className={styles.infoTitle}>設立(予定)</dt>
+                <dd className={styles.infoDescription}>2025年1月</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>所在地</dt>
                 <dd className={styles.infoDescription}>
-                  〒000-0000
+                  〒150-0002
                   <br />
-                  東京都渋谷区渋谷1-1-1
+                  東京都渋谷区渋谷2-19-15宮益坂ビルディング609
                 </dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>代表者</dt>
-                <dd className={styles.infoDescription}>鈴木 太郎</dd>
+                <dd className={styles.infoDescription}>青木 聖彦</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>資本金</dt>
-                <dd className={styles.infoDescription}>1,000万円</dd>
+                <dd className={styles.infoDescription}>30万円</dd>
               </dl>
             </div>
           </div>
