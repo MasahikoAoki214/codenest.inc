@@ -15,7 +15,7 @@ export default async function Page() {
     <>
       <section className={styles.top}>
         <div>
-          <h1 className={styles.title}>確かな技術力を育む</h1>
+          <h1 className={styles.title}>確かな技術力で社会に貢献する</h1>
           <p className={styles.description}>
             未経験からエンジニアを育て社会に貢献し、クライアント様を筆頭に従業員ひとりひとりの未来に寄り添う。
           </p>
@@ -42,9 +42,22 @@ export default async function Page() {
             <h2 className={styles.sectionTitleEn}>Business</h2>
             <p className={styles.sectionTitleJa}>事業内容</p>
             <p className={styles.sectionDescription}>
-              当社は、次世代テクノロジーの研究開発・製造・販売を行う革新的な企業です。
+              弊社ではアプリケーションの開発、WEBサイトのデザイン&and;構築、SES事業等に特に力を入れております。
               <br />
-              AI、ロボット工学、自律システムなど、幅広い分野でのソリューション提供を通じて、社会の進化と未来の創造に貢献します。
+              アプリケーション開発、WEBサイトの構築につきまして、
+              <br />
+              企画から構築まで一本化出来るようサポートさせていただきますのでご縁がありましたら是非ご一緒させていただけたらと存じます。
+              <br />
+              <br />
+              SES事業につきまして、
+              <br />
+              エージェントの営業様とは随時商談させて頂けたらと存じますので代表へお電話、もしくはお問合せフォームよりアポイント頂けますと幸いです。
+              <br />
+              <br />
+              既存の取引先の皆様、
+              <br /> 今後ともよろしくお願いいたします。
+              <br />
+              より詳しい事業内容につきましては専用ページへ記載しております。
             </p>
             <ButtonLink href="/business">もっとみる</ButtonLink>
           </div>
@@ -71,7 +84,7 @@ export default async function Page() {
               <h2 className={styles.sectionTitleEn}>About Us</h2>
               <p className={styles.sectionTitleJa}>私たちについて</p>
               <p className={styles.sectionDescription}>
-                「テクノロジーの力で世界を変える」をミッションに掲げ、日々活動をしています。
+                「未経験からエンジニアを育て社会に貢献し、クライアント様を筆頭に従業員ひとりひとりの未来に寄り添う。」をミッションに掲げ、日々活動をしています。
               </p>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>社名</dt>
