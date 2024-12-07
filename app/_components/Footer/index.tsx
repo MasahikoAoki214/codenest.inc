@@ -20,7 +20,7 @@ export default function Footer() {
           </li>
         </ul>
       </nav>
-      <p>© CodeNest.inc All Rights Reserved 2023</p>
+      <p>© CodeNest.inc All Rights Reserved 2024</p>
     </footer>
   );
 }
