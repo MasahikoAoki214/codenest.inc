@@ -66,24 +66,22 @@ export const client = createClient({
 
 // ニュース一覧を取得
 export const getNewsList = async (queries?: MicroCMSQueries) => {
-  const listData = await client
-    .getList<News>({
-      endpoint: 'news',
-      queries,
-    })
-    .catch(notFound);
+  const listData = await client.getList<News>({
+    endpoint: 'news',
+    queries,
+  });
+  // .catch(notFound);
   return listData;
 };
 
 // ニュースの詳細を取得
 export const getNewsDetail = async (contentId: string, queries?: MicroCMSQueries) => {
-  const detailData = await client
-    .getListDetail<News>({
-      endpoint: 'news',
-      contentId,
-      queries,
-    })
-    .catch(notFound);
+  const detailData = await client.getListDetail<News>({
+    endpoint: 'news',
+    contentId,
+    queries,
+  });
+  // .catch(notFound);
 
   return detailData;
 };
