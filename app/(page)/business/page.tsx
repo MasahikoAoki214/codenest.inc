@@ -17,11 +17,11 @@ export default async function Page({ searchParams }: Props) {
   });
   return (
     <div className={styles.container}>
-      {data.contents.length === 0 ? (
+      {data?.contents.length === 0 ? (
         <p className={styles.empty}>事業内容が登録されていません。</p>
       ) : (
         <ul>
-          {data.contents.map((business) => (
+          {data?.contents.map((business) => (
             <li key={business.id} className={styles.list}>
               <dl className={styles.flex}>
                 <dt className={styles.name}>
