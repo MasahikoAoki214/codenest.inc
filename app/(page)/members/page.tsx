@@ -17,11 +17,11 @@ export default async function Page({ searchParams }: Props) {
   });
   return (
     <div className={styles.container}>
-      {data.contents.length === 0 ? (
+      {data?.contents.length === 0 ? (
         <p className={styles.empty}>メンバーが登録されていません。</p>
       ) : (
         <ul>
-          {data.contents.map((member) => (
+          {data?.contents.map((member) => (
             <li key={member.id} className={styles.list}>
               <Image
                 src={member.image?.url as string}
