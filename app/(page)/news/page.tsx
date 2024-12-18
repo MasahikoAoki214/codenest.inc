@@ -11,8 +11,7 @@ export default async function Page() {
   });
   return (
     <>
-      <NewsList articles={data.contents} />
-      <Pagination totalCount={data.totalCount} basePath="/news" />
+      <NewsList articles={data?.contents} />
     </>
   );
 }

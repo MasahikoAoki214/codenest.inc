@@ -21,11 +21,11 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   });
 
   return {
-    title: data.title,
-    description: data.description,
+    title: data?.title,
+    description: data?.description,
     openGraph: {
-      title: data.title,
-      description: data.description,
+      title: data?.title,
+      description: data?.description,
       images: [data?.thumbnail?.url || ''],
     },
   };
@@ -37,7 +37,7 @@ export default async function Page({ params, searchParams }: Props) {
   });
   return (
     <>
-      <Article data={data} />
+      {/* <Article data={data} /> */}
       <div className={styles.footer}>
         <ButtonLink href="/news">ニュース一覧へ</ButtonLink>
       </div>
