@@ -66,81 +66,110 @@ export const client = createClient({
 
 // ニュース一覧を取得
 export const getNewsList = async (queries?: MicroCMSQueries) => {
-  const listData = await client.getList<News>({
-    endpoint: 'news',
-    queries,
-  });
-  // .catch(notFound);
-  return listData;
+  try {
+    const listData = await client.getList<News>({
+      endpoint: 'news',
+      queries,
+    });
+    // .catch(notFound);
+    return listData;
+  } catch (error) {
+    console.error('error');
+    return null;
+  }
 };
 
 // ニュースの詳細を取得
 export const getNewsDetail = async (contentId: string, queries?: MicroCMSQueries) => {
-  const detailData = await client.getListDetail<News>({
-    endpoint: 'news',
-    contentId,
-    queries,
-  });
-  // .catch(notFound);
-
-  return detailData;
+  try {
+    const detailData = await client.getListDetail<News>({
+      endpoint: 'news',
+      contentId,
+      queries,
+    });
+    // .catch(notFound);
+    return detailData;
+  } catch (error) {
+    console.error('news fetch error');
+    return null;
+  }
 };
 
 // カテゴリーの一覧を取得
 export const getCategoryList = async (queries?: MicroCMSQueries) => {
-  const listData = await client
-    .getList<Category>({
+  try {
+    const listData = await client.getList<Category>({
       endpoint: 'categories',
       queries,
-    })
-    .catch(notFound);
+    });
+    // .catch(notFound);
 
-  return listData;
+    return listData;
+  } catch (error) {
+    console.error('category error');
+    return null;
+  }
 };
 
 // カテゴリーの詳細を取得
 export const getCategoryDetail = async (contentId: string, queries?: MicroCMSQueries) => {
-  const detailData = await client
-    .getListDetail<Category>({
+  try {
+    const detailData = await client.getListDetail<Category>({
       endpoint: 'categories',
       contentId,
       queries,
-    })
-    .catch(notFound);
+    });
+    // .catch(notFound);
 
-  return detailData;
+    return detailData;
+  } catch (error) {
+    console.error('category detail error');
+    return null;
+  }
 };
 
 // メンバー一覧を取得
 export const getMembersList = async (queries?: MicroCMSQueries) => {
-  const listData = await client
-    .getList<Member>({
+  try {
+    const listData = await client.getList<Member>({
       endpoint: 'members',
       queries,
-    })
-    .catch(notFound);
-  return listData;
+    });
+    // .catch(notFound);
+    return listData;
+  } catch (error) {
+    console.error('member list error');
+    return null;
+  }
 };
 
 // 事業内容一覧を取得
 export const getBusinessList = async (queries?: MicroCMSQueries) => {
-  const listData = await client
-    .getList<Business>({
+  try {
+    const listData = await client.getList<Business>({
       endpoint: 'business',
       queries,
-    })
-    .catch(notFound);
-  return listData;
+    });
+    // .catch(notFound);
+    return listData;
+  } catch (error) {
+    console.error('error');
+    return null;
+  }
 };
 
 // メタ情報を取得
 export const getMeta = async (queries?: MicroCMSQueries) => {
-  const data = await client
-    .getObject<Meta>({
+  try {
+    const data = await client.getObject<Meta>({
       endpoint: 'meta',
       queries,
-    })
-    .catch(() => null);
+    });
+    // .catch(() => null);
 
-  return data;
+    return data;
+  } catch (error) {
+    console.error('error');
+    return null;
+  }
 };
