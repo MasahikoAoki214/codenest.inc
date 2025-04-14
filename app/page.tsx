@@ -84,14 +84,14 @@ export default async function Page() {
               <h2 className={styles.sectionTitleEn}>About Us</h2>
               <p className={styles.sectionTitleJa}>私たちについて</p>
               <p className={styles.sectionDescription}>
-                「未経験からエンジニアを育て社会に貢献し、クライアント様を筆頭に従業員ひとりひとりの未来に寄り添う。」をミッションに掲げ、日々活動をしています。
+                「未経験からエンジニアを育て社会に貢献し、従業員ひとりひとりの未来に寄り添う。」をミッションに掲げ、日々活動をしています。
               </p>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>社名</dt>
                 <dd className={styles.infoDescription}>株式会社コードネスト</dd>
               </dl>
               <dl className={styles.info}>
-                <dt className={styles.infoTitle}>設立(予定)</dt>
+                <dt className={styles.infoTitle}>設立</dt>
                 <dd className={styles.infoDescription}>2025年1月</dd>
               </dl>
               <dl className={styles.info}>
@@ -105,6 +105,10 @@ export default async function Page() {
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>代表者</dt>
                 <dd className={styles.infoDescription}>青木 聖彦</dd>
+              </dl>
+              <dl className={styles.info}>
+                <dt className={styles.infoTitle}>電話番号</dt>
+                <dd className={styles.infoDescription}>03-6820-7389</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>資本金</dt>
