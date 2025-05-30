@@ -37,10 +37,16 @@ export default async function Page({ params, searchParams }: Props) {
   });
   return (
     <>
-      {/* <Article data={data} /> */}
-      <div className={styles.footer}>
-        <ButtonLink href="/news">ニュース一覧へ</ButtonLink>
-      </div>
+      {data ? (
+        <>
+          <Article data={data} />
+          <div className={styles.footer}>
+            <ButtonLink href="/news">ニュース一覧へ</ButtonLink>
+          </div>
+        </>
+      ) : (
+        <div>記事が見つかりませんでした</div>
+      )}
     </>
   );
 }
