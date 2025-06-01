@@ -1,9 +1,6 @@
-// import ButtonLink from '@/app/_components/ButtonLink';
 import Hero from '@/app/_components/Hero';
 import React from 'react';
-// import Image from 'next/image';
 import styles from './page.module.css';
-// import ContentsField from '@/app/_components/Contents';
 import { mainClient } from '@/app/_libs/microcms';
 
 export type Recruit = {
@@ -28,32 +25,14 @@ export type Benefit = {
   benefits_description: string;
 };
 
-// const content = ` 弊社ではアプリケーションの開発、WEBサイトのデザイン 構築、SES事業等に特に力を入れております。
-//               アプリケーション開発、WEBサイトの構築につきまして、
-//               企画から構築まで一本化出来るようサポートさせていただきますのでご縁がありましたら是非ご一緒させていただけたらと存じます。
-
-//               SES事業につきまして、
-//               エージェントの営業様とは随時商談させて頂けたらと存じますので代表へお電話、もしくはお問合せフォームよりアポイント頂けますと幸いです。
-
-//               既存の取引先の皆様、
-//               今後ともよろしくお願いいたします。
-//               より詳しい事業内容につきましては専用ページへ記載しております。`;
-
-const page = async () => {
+const Page = async () => {
   const corporateData = await mainClient.getList<Recruit>({
     endpoint: 'corporate',
   });
+  console.log('corporateData', corporateData);
   return (
     <div>
       <Hero title={'採用情報'} sub={'私たちのチームに参加し一緒に成長しませんか？'} />
-      {/* <ContentsField
-        title="Business"
-        subTitle="事業内容"
-        description={content}
-        href="/business"
-        imgSrc="/img-business.png"
-      /> */}
-
       <div className="max-w-4xl mx-auto px-4 py-8">
         <section className={styles.section}>
           <div className={styles.horizontal}>
@@ -130,7 +109,9 @@ const page = async () => {
                   <p className={styles.cell}>
                     {benefit.benefits_title}
                     <br />
-                    <span className="text-sm text-gray-700">{benefit.benefits_description}</span>
+                    <span className="text-sm text-gray-700">
+                      {benefit.benefits_description ?? ''}
+                    </span>
                   </p>
                 </li>
               ) : null,
@@ -142,4 +123,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default Page;
