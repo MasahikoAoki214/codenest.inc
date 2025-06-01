@@ -29,7 +29,7 @@ export default function Menu() {
             </Link>
           </li>
           <li>
-            <Link href="" onClick={close}>
+            <Link href="/recruit" onClick={close}>
               採用情報
             </Link>
           </li>
