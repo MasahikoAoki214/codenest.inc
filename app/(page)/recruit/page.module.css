@@ -220,7 +220,7 @@
   .section {
     width: 100%;
     margin: auto;
-    padding: 80px 16px;
+    padding: 20px 16px;
   }
 
   .sectionTitleEn {
@@ -249,8 +249,7 @@
 
   .horizontal {
     display: flex;
-    flex-direction: column-reverse;
-    gap: 40px;
+    flex-direction: column;
   }
 
   .businessImg {

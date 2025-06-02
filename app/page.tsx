@@ -17,7 +17,7 @@ export default async function Page() {
         <div>
           <h1 className={styles.title}>確かな技術力で社会に貢献する</h1>
           <p className={styles.description}>
-            未経験からエンジニアを育て社会に貢献し、クライアント様を筆頭に従業員ひとりひとりの未来に寄り添う。
+            未経験からエンジニアを育て社会に貢献し、従業員ひとりひとりの未来に寄り添う。
           </p>
         </div>
         <Image
@@ -128,7 +128,7 @@ export default async function Page() {
               <br />
               新しいアイデアを出し合い、成長する環境で活躍したい方は、ぜひご応募ください。当社でのキャリアを築きながら、技術の最前線で力を発揮しましょう。
             </p>
-            <ButtonLink href="">採用情報へ</ButtonLink>
+            <ButtonLink href="/recruit">採用情報へ</ButtonLink>
           </div>
           <Image
             className={styles.hiringImg}
