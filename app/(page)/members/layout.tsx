@@ -2,7 +2,7 @@ import Hero from '@/app/_components/Hero';
 import Sheet from '@/app/_components/Sheet';
 
 export const metadata = {
-  title: 'メンバー｜シンプルなコーポレートサイト',
+  title: 'メンバー｜株式会社コードネスト',
 };
 
 type Props = {
