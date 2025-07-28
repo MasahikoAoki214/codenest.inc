@@ -5,6 +5,19 @@ import { mainClient } from '@/app/_libs/microcms';
 
 export type Recruit = {
   id: string;
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date;
+  revisedAt: Date;
+  name: string;
+  founded: string;
+  location: string;
+  employees: string;
+  ceo: string;
+  business: string;
+  tell: string;
+  website: string;
+  capital: string;
   recruit_title: string;
   recruit_description: string;
   recruit_employment: string[];

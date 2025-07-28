@@ -1,15 +1,19 @@
 import Image from 'next/image';
-import { getNewsList } from '@/app/_libs/microcms';
+import { getNewsList, mainClient } from '@/app/_libs/microcms';
 import { TOP_NEWS_LIMIT } from '@/app/_constants';
 import NewsList from '@/app/_components/NewsList';
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
+import { Recruit } from './(page)/recruit/page';
 
 export const revalidate = 60;
 
 export default async function Page() {
   const data = await getNewsList({
     limit: TOP_NEWS_LIMIT,
+  });
+  const corporateData = await mainClient.getList<Recruit>({
+    endpoint: 'corporate',
   });
   return (
     <>
@@ -88,31 +92,31 @@ export default async function Page() {
               </p>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>社名</dt>
-                <dd className={styles.infoDescription}>株式会社コードネスト</dd>
+                <dd className={styles.infoDescription}>{corporateData.contents[1].name}</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>設立</dt>
-                <dd className={styles.infoDescription}>2025年1月</dd>
+                <dd className={styles.infoDescription}>{corporateData.contents[1].founded}</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>所在地</dt>
-                <dd className={styles.infoDescription}>
-                  〒150-0002
-                  <br />
-                  東京都渋谷区渋谷2-19-15宮益坂ビルディング609
-                </dd>
+                <dd className={styles.infoDescription}>{corporateData.contents[1].location}</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>代表者</dt>
-                <dd className={styles.infoDescription}>青木 聖彦</dd>
+                <dd className={styles.infoDescription}>{corporateData.contents[1].ceo}</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>電話番号</dt>
-                <dd className={styles.infoDescription}>03-6820-7389</dd>
+                <dd className={styles.infoDescription}>{corporateData.contents[1].tell}</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>資本金</dt>
-                <dd className={styles.infoDescription}>30万円</dd>
+                <dd className={styles.infoDescription}>{corporateData.contents[1].capital}</dd>
+              </dl>
+              <dl className={styles.info}>
+                <dt className={styles.infoTitle}>従業員数</dt>
+                <dd className={styles.infoDescription}>{corporateData.contents[1].employees}</dd>
               </dl>
             </div>
           </div>
