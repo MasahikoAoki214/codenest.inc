@@ -16,8 +16,8 @@ export default function ButtonLink({ href, children, isExternal = false }: Props
     );
   }
   return (
-    <Link href={href} className={styles.button}>
-      {children}
+    <Link href={href} legacyBehavior>
+      <a className={styles.button}>{children}</a>
     </Link>
   );
 }

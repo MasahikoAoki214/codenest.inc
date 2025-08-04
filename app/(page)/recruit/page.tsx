@@ -2,6 +2,7 @@ import Hero from '@/app/_components/Hero';
 import React from 'react';
 import styles from './page.module.css';
 import { mainClient } from '@/app/_libs/microcms';
+import ButtonLink from '@/app/_components/ButtonLink';
 
 export type Recruit = {
   id: string;
@@ -131,6 +132,9 @@ const Page = async () => {
             )}
           </ul>
         </section>
+        <div className="flex justify-center mt-8 w-full">
+          <ButtonLink href="/contact">お問い合わせへ</ButtonLink>
+        </div>
       </div>
     </div>
   );

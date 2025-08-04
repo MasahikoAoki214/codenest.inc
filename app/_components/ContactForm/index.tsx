@@ -57,16 +57,22 @@ export default function ContactForm() {
         </div>
       </div>
       <div className={styles.item}>
-        <label className={styles.label} htmlFor="conpany">
+        <label className={styles.label} htmlFor="company">
           会社名
         </label>
-        <input className={styles.textfield} type="text" id="company" ref={companyRef} />
+        <input
+          className={styles.textfield}
+          type="text"
+          id="company"
+          ref={companyRef}
+          placeholder="個人の場合は「なし」と入力してください"
+        />
       </div>
       <div className={styles.item}>
         <label className={styles.label} htmlFor="email">
           メールアドレス
         </label>
-        <input className={styles.textfield} type="text" id="email" ref={emailRef} />
+        <input className={styles.textfield} type="email" id="email" ref={emailRef} />
       </div>
       <div className={styles.item}>
         <label className={styles.label} htmlFor="message">
