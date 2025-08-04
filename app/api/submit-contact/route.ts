@@ -24,6 +24,16 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  //メルアドブロック//
+  const blockedEmails = ['support@saku-corp.co.jp', 'r-imai@sales-crowd.jp'];
+
+  if (blockedEmails.includes(email.toLowerCase())) {
+    return NextResponse.json(
+      { status: 'error', message: 'このメールアドレスは使用できません' },
+      { status: 400 },
+    );
+  }
+
   try {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
